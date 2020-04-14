@@ -9,9 +9,18 @@ import signInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up
 // Components
 import Header from "./components/header/header.component";
 
+import { auth } from "./firebase/firebase.utils";
+
 import "./App.css";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      currentUser: null,
+    };
+  }
+
   render() {
     return (
       <div className="App">

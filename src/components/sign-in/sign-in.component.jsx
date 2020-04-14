@@ -7,6 +7,8 @@ import "./sign-in.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 class signIn extends Component {
   constructor(props) {
     super(props);
@@ -50,7 +52,10 @@ class signIn extends Component {
             label="password"
             required
           />
-          <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton type="submit">Sign in</CustomButton>
+          <CustomButton onClick={signInWithGoogle}>
+            Sign in with Google
+          </CustomButton>
         </form>
       </div>
     );
