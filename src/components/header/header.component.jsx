@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// high order component
+import { connect } from "react-redux";
+
 // Styles
 import "./header.styles.scss";
 
@@ -34,4 +38,9 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+// this name can be anything but mapStateToProps is standard with redux codebases
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);
