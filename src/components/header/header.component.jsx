@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 // high order component
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 // Styles
 import "./header.styles.scss";
@@ -45,9 +48,13 @@ const Header = ({ currentUser, hiddenDropdown }) => {
 
 // this name can be anything but mapStateToProps is standard with redux codebases
 /*({user: {currentUser}, cart: {hidden}}) */
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-  hiddenDropdown: state.cart.hidden,
+
+/*
+and instead of passing it as a function we just pass it like so where the properties that we want point
+*/
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hiddenDropdown: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);
