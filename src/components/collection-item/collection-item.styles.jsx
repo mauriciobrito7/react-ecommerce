@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import CustomButton from "../custom-button/custom-button.component";
+import { device } from "../../theme";
 
 export const CollectionItemContainer = styled.div`
-  width: 22vw;
+  width: 44vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -16,6 +17,17 @@ export const CollectionItemContainer = styled.div`
       opacity: 0.85;
       display: flex;
     }
+
+    ${device.tablet`
+      &:hover {
+        .image {
+          opacity: unset;
+        }
+        button {
+          opacity: unset;
+        }
+      }
+    `}
   }
 `;
 
@@ -33,10 +45,16 @@ export const AddButton = styled(CustomButton)`
   position: absolute;
   top: 255px;
   display: none;
+  ${device.tablet`
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+  `}
 `;
 
 export const CollectionFooterContainer = styled.div`
-  width: 100%;
+  width: 70%;
   height: 5%;
   display: flex;
   justify-content: space-between;
