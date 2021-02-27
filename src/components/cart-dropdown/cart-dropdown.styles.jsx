@@ -25,6 +25,10 @@ export const CartItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 export const CartDropdownButton = styled(CustomButton)`
