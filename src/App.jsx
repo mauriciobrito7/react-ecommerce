@@ -11,6 +11,7 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 // Components
 import Header from "./components/header/header.component";
 import Layout from "./components/layout/layout";
+import Footer from "./components/footer/Footer";
 
 // Firebase
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
@@ -70,6 +71,7 @@ class App extends React.Component {
             />
           </Switch>
         </Layout>
+        <Footer />
       </>
     );
   }
