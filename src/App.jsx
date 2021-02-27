@@ -10,6 +10,7 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 
 // Components
 import Header from "./components/header/header.component";
+import Layout from "./components/layout/layout";
 
 // Firebase
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
@@ -21,7 +22,7 @@ import { selectCurrentUser } from "./redux/user/user.selectors";
 // Actions
 import { setCurrentUser } from "./redux/user/user.actions";
 
-import "./App.css";
+import { GlobalStyle } from "./global.styles";
 
 class App extends React.Component {
   unsubsribeFromAuth = null;
@@ -48,25 +49,28 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <>
+        <GlobalStyle />
         <Header />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
-          <Route
-            exact
-            path="/signIn"
-            render={() =>
-              this.props.currentUser ? (
-                <Redirect to="/" />
-              ) : (
-                <SignInAndSignUpPage />
-              )
-            }
-          />
-        </Switch>
-      </div>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/shop" component={ShopPage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
+            <Route
+              exact
+              path="/signIn"
+              render={() =>
+                this.props.currentUser ? (
+                  <Redirect to="/" />
+                ) : (
+                  <SignInAndSignUpPage />
+                )
+              }
+            />
+          </Switch>
+        </Layout>
+      </>
     );
   }
 }
