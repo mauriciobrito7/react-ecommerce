@@ -4,7 +4,7 @@ import { ContainerFlex } from "./Footer.styles";
 const Footer = () => {
   return (
     <ContainerFlex>
-      Proudly made in <span>🇻🇪</span> by &nbsp;
+      Proudly made in 🇻🇪 by &nbsp;
       <a
         href="https://www.linkedin.com/in/mauricio-brito-62b0a6140/"
         target="blind"
