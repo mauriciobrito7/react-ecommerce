@@ -1,20 +1,50 @@
-## Lesson-2
+# React Ecommerce App
 
-Creating our first component, homepage and adding scss to help us with writing our styles
+---
 
-# How to fork and clone
+### Content Table
 
-One quick note about cloning this project. If you wish to make commits and push the code up after cloning this repo, you should fork the project first. In order to own your own copy of this repository, you have to fork it so you get your own copy on your own profile!
+- [Description](#description)
+- [How to install](#how-to-install)
+- [Author](#author)
 
-You can see the fork button in the top right corner of every GitHub project; click it and a copy of the project will be added to your GitHub profile under the same name as the original project.
+---
 
-![alt text](https://i.ibb.co/1YN7SJ6/Screen-Shot-2019-07-01-at-2-02-40-AM.png "image to fork button")
+## Description
 
-After forking the project, simply clone it the way you would from the new forked project in your own GitHub repository and you can commit and push to it freely!
+Select products by categories and checkout them on the cart.
 
+#### Technologies
 
-# After you fork and clone:
+- React.js
+- Styled Components
+- React Router Dom
+- Firebase
 
-## Install dependencies
+[Back To The Top](#react-ecommerce-app)
 
-In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
+---
+
+## How To Install
+
+### Run Install
+
+`npm install`
+
+### Run Project
+
+`npm run start`
+
+### Go to the server of the project
+
+`http://localhost:3000/`
+
+---
+
+## Author
+
+- LinkedIn - [Mauricio Brito](https://www.linkedin.com/in/mauricio-brito-62b0a6140/)
+- Github - [@mauriciobrito7](https://github.com/mauriciobrito7)
+
+[Back To The Top](#react-ecommerce-app)
+
